@@ -16,6 +16,7 @@
   <record id="view_medical_checkup_form" model="ir.ui.view">
     <field name="name">hr.medical.checkup.form</field>
     <field name="model">hr.medical.checkup</field>
+    <field name="type">form</field>
     <field name="arch" type="xml">
       <form>
         <group>
