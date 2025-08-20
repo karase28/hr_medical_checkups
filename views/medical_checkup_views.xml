@@ -35,6 +35,6 @@
     <field name="view_mode">list,form</field>
   </record>
 
-  <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent="base.menu_custom"/>
+  <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent="hr.menu_hr_employee_root"/>
   <menuitem id="menu_medical_checkup" name="Ewidencja" action="action_medical_checkup" parent="menu_medical_checkup_root"/>
 </odoo>
