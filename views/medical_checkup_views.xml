@@ -35,14 +35,6 @@
     <field name="view_mode">list,form</field>
   </record>
 
-  <menuitem id="menu_medical_checkup_root"
-          name="Badania lekarskie"
-          parent_id="eval('364')"
-          sequence="35"/>
-
-  <menuitem id="menu_medical_checkup_action"
-          name="Lista badań"
-          parent="menu_medical_checkup_root"
-          action="action_medical_checkup"
-          sequence="10"/>
+  <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent_id="eval('364')" sequence="35"/>
+  <menuitem id="menu_medical_checkup_action" name="Lista badań" parent="menu_medical_checkup_root" action="action_medical_checkup" sequence="10"/>
 </odoo>
