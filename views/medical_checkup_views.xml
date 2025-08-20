@@ -4,12 +4,12 @@
     <field name="model">hr.medical.checkup</field>
     <field name="type">list</field>
     <field name="arch" type="xml">
-      <tree>
+      <list>
         <field name="employee_id"/>
         <field name="checkup_date"/>
         <field name="next_checkup_date"/>
         <field name="result"/>
-      </tree>
+      </list>
     </field>
   </record>
 
