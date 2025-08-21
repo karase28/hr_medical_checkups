@@ -1,23 +1,22 @@
 from odoo import models, fields, api
-from datetime import timedelta
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class HrMedicalCheckup(models.Model):
     _name = 'hr.medical.checkup'
-    _description = 'Badania lekarskie pracownika'
+    _description = 'Badania lekarskie pracowników'
 
     employee_id = fields.Many2one('hr.employee', string='Pracownik', required=True)
     checkup_date = fields.Date(string='Data badania', required=True)
-    next_checkup_date = fields.Date(string='Data kolejnego badania', required=True)
+    next_checkup_date = fields.Date(string='Następne badanie')
     result = fields.Selection([
-        ('fit', 'Zdolny do pracy'),
-        ('unfit', 'Niezdolny do pracy'),
-    ], string='Wynik badania', required=True)
+        ('ok', 'OK'),
+        ('fail', 'Niezdany'),
+    ], string='Wynik', required=True)
 
-    @api.model
     def check_expiring_checkups(self):
         today = fields.Date.today()
-        reminder_date = today + timedelta(days=30)
-        expiring = self.search([('next_checkup_date', '<=', reminder_date)])
+        expiring = self.search([('next_checkup_date', '<=', today)])
         for record in expiring:
-            # Tu można dodać wysyłkę maila lub powiadomienie
-            _logger.info(f"Badanie dla {record.employee_id.name} wygasa {record.next_checkup_date}")
+            _logger.info(f"Badanie wygasa dla: {record.employee_id.name}")
