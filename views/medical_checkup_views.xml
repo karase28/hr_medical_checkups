@@ -36,7 +36,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent="hr.menu_hr_root" sequence="35"/>
+    <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent="hr.menu_hr_main" sequence="35"/>
     <menuitem id="menu_medical_checkup_action" name="Lista badań" parent="menu_medical_checkup_root" action="action_medical_checkup" sequence="10"/>
   </data>
 </odoo>
