@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <record id="model_hr_medical_checkup" model="ir.model">
-      <field name="name">hr.medical.checkup</field>
-      <field name="model">hr.medical.checkup</field>
-      <field name="state">base</field>
-    </record>
-
     <record id="ir_cron_check_medical_expiry" model="ir.cron">
       <field name="name">Sprawdź wygasające badania</field>
       <field name="model_id" ref="model_hr_medical_checkup"/>
