@@ -1,0 +1,13 @@
+<odoo>
+  <data noupdate="0">
+    <record id="group_hr_medical_user" model="res.groups">
+      <field name="name">HR Medical User</field>
+      <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <record id="group_hr_medical_manager" model="res.groups">
+      <field name="name">HR Medical Manager</field>
+      <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+  </data>
+</odoo>

@@ -31,10 +31,10 @@ class HrMedicalCheckup(models.Model):
             return
 
         # znajdź lub stwórz kanał
-        channel = self.env['mail.channel'].search([('name', '=', 'HR – Badania lekarskie')], limit=1)
+        channel = self.env['mail.channel'].search([('name', '=', 'HR : Badania lekarskie')], limit=1)
         if not channel:
             channel = self.env['mail.channel'].create({
-                'name': 'HR – Badania lekarskie',
+                'name': 'HR : Badania lekarskie',
                 'channel_type': 'channel',
                 'public': 'private',
             })

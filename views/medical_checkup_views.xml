@@ -34,6 +34,7 @@
       <field name="name">Badania lekarskie</field>
       <field name="res_model">hr.medical.checkup</field>
       <field name="view_mode">list,form</field>
+      <field name="groups_id" eval="[(4, ref('hr_medical_checkups.group_hr_medical_user'))]"/>
     </record>
 
     <menuitem id="menu_medical_checkup_root" name="Badania lekarskie" parent="hr.menu_hr_main" sequence="35"/>

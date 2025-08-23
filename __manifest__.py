@@ -7,6 +7,7 @@
     'depends': ['hr'],
     'data': [
         'security/ir.model.access.csv',
+        'security/groups.xml',
         'views/medical_checkup_views.xml',
         'data/medical_checkup_cron.xml',
     ],
